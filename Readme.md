@@ -25,7 +25,7 @@ This repository the usage of Sequelize within an [Express](https://expressjs.com
 
 ## Prerequisites
 - [Sequelize](http://docs.sequelizejs.com)
-- [MySQL2](https://www.npmjs.com/package/mysql2) or [Postgres SQL](https://www.npmjs.com/package/pg)
+- [MySQL](https://www.npmjs.com/package/mysql) or [Postgres SQL](https://www.npmjs.com/package/pg)
 - [Node.js 8.0+](http://nodejs.org)
 - Command Line Tools
  - <img src="http://deluge-torrent.org/images/apple-logo.gif" height="17">&nbsp;**Mac OS X:** [Xcode](https://itunes.apple.com/us/app/xcode/id497799835?mt=12) (or **OS X 10.9+**: `xcode-select --install`)
