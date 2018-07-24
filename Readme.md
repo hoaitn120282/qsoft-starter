@@ -34,4 +34,39 @@ This repository the usage of Sequelize within an [Express](https://expressjs.com
  - <img src="http://i1-news.softpedia-static.com/images/extra/LINUX/small/slw218news1.png" height="17">&nbsp;**Fedora**: `sudo dnf groupinstall "Development Tools"`
  - <img src="https://en.opensuse.org/images/b/be/Logo-geeko_head.png" height="17">&nbsp;**OpenSUSE:** `sudo zypper install --type pattern devel_basis`
 
+## Getting Started
+
+The easiest way to get started is to clone the repository:
+
+```bash
+# Get the latest snapshot
+git clone https://github.com/hoaitn120282/qsoft-starter.git myproject
+
+# Change directory
+cd myproject
+
+# Install NPM dependencies
+npm install
+
+# Then simply start your app
+npm start or node index.js 
+```
+
+**Warning:** If you want to use some api that need https to work (for example pinterest or facebook),
+you will need to download [ngrok](https://ngrok.com/).
+You must start ngrok after starting the project.
+
+```bash
+# start ngrok to intercept the data exchanged on port 8080
+./ngrok http 8080
+```
+
+Next, you must use the https url defined by ngrok, for example `https://hackaton.ngrok.io`
+
+**Note:** I highly recommend installing [Nodemon](https://github.com/remy/nodemon).
+It watches for any changes in your  node.js app and automatically restarts the
+server. Once installed, instead of `node app.js` use `nodemon app.js`. It will
+save you a lot of time in the long run, because you won't need to manually
+restart the server each time you make a small change in code. To install, run
+`sudo npm install -g nodemon`.
 
