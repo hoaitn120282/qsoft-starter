@@ -7,7 +7,12 @@
     "dialect": "mysql",
     "logging": false,
     "freezeTableName": true,
-    "operatorsAliases": false
+    "operatorsAliases": false,
+    "pool": {
+      "max": 5,
+      "min": 0,
+      "idle": 10000
+    }
   },
   "test": {
     "username": "root",
@@ -17,7 +22,12 @@
     "dialect": "mysql",
     "logging": false,
     "freezeTableName": true,
-    "operatorsAliases": false
+    "operatorsAliases": false,
+    "pool": {
+      "max": 5,
+      "min": 0,
+      "idle": 10000
+    }
   },
   "production": {
     "username": "root",
@@ -27,6 +37,11 @@
     "dialect": "mysql",
     "logging": false,
     "freezeTableName": true,
-    "operatorsAliases": false
+    "operatorsAliases": false,
+    "pool": {
+      "max": 5,
+      "min": 0,
+      "idle": 10000
+    }
   }
 }
