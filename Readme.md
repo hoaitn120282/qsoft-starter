@@ -2,39 +2,6 @@
 
 This repository the usage of Sequelize within an [Express](https://expressjs.com) application.
 
-```bash
-npm install
-```
-
-Create `.env` file from `.env_example`
-
-## Starting App
-
-Yarn
-```bash
-yarn start
-```
-or npm
-```bash
-npm start
-```
-
-**With Migrations**
-
-```
-npm install
-node_modules/.bin/sequelize db:migrate
-npm start
-```
-
-This will start the application and create an sqlite database in your app dir.
-Just open [http://localhost:3000](http://localhost:3000).
-
-## Running Tests
-
-We have added some [Mocha](https://mochajs.org) based test. You can run them by `npm test`
-
-
 ## Setup in Details
 
 In order to understand how this application has been built, you can find the
@@ -131,6 +98,10 @@ function normalizePort(val) { /* ... */ }
 function onError(error) { /* ... */ }
 function onListening() { /* ... */ }
 ```
+
+## Running Tests
+
+We have added some [Mocha](https://mochajs.org) based test. You can run them by `npm test`
 
 And finally you have to adjust the `config/database.json` to fit your environment.
 Once thats done, your database configuration is ready!
