@@ -37,7 +37,10 @@ const models = require(process.cwd() + "/src/models/index");
 models.sequelize
     .authenticate()
     .then(() => {
-        // models.sequelize.sync().then(function() {});
+        console.log(
+			"%s Database connect successful!", 
+			chalk.green("✓")
+		);
     })
     .catch(err => {
         Logger.error("Unable to connect to the database:", err);
@@ -52,38 +55,9 @@ const app = express();
  */
 app.set("host", process.env.NODE_HOST || "0.0.0.0");
 app.set("port", process.env.NODE_PORT || 8080);
-app.set("views", path.join(__dirname, "views"));
-app.set("view engine", "pug");
-app.use(expressStatusMonitor());
-app.use(compression());
-app.use(
-    sass({
-        src: path.join(__dirname, "public"),
-        dest: path.join(__dirname, "public")
-    })
-);
 app.use(logger("dev"));
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
-app.use(expressValidator());
-app.use(
-    session({
-        resave: true,
-        saveUninitialized: true,
-        secret: process.env.SESSION_SECRET,
-        cookie: { maxAge: 1209600000 } // two weeks in milliseconds
-    })
-);
-app.use(passport.initialize());
-app.use(passport.session());
-app.use(lusca.xframe("SAMEORIGIN"));
-app.use(lusca.xssProtection(true));
-app.disable("x-powered-by");
-app.use((req, res, next) => {
-    res.locals.user = req.user;
-    next();
-});
-
 /**
  * Demo call route.
  */
