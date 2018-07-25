@@ -3,7 +3,6 @@
 This repository the usage of Sequelize within an [Express](https://expressjs.com) application.
 
 ## Main Features
-
 - **Local Authentication** using Email and Password
 - **OAuth 1.0a Authentication** via Twitter
 - **OAuth 2.0 Authentication** via Facebook, Google, GitHub, LinkedIn, Instagram
@@ -12,7 +11,6 @@ This repository the usage of Sequelize within an [Express](https://expressjs.com
 - Node.js clusters support
 - Sass stylesheets (auto-compiled via middleware)
 - Bootstrap 4 + Extra Themes
-- Contact Form (powered by Mailgun, Sendgrid or Mandrill)
 - **Account Management**
  - Gravatar
  - Profile Details
