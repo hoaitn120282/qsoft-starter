@@ -1,8 +1,8 @@
 {
   "development": {
     "username": "root",
-    "password": "Qkc74CbCitf5iULq",
-    "database": "qs-starterkit",
+    "password": "",
+    "database": "qs-starter",
     "host": "127.0.0.1",
     "dialect": "mysql",
     "logging": false,
@@ -31,8 +31,8 @@
   },
   "production": {
     "username": "root",
-    "password": "Qkc74CbCitf5iULq",
-    "database": "qs-starterkit",
+    "password": "",
+    "database": "qs-starter",
     "host": "127.0.0.1",
     "dialect": "mysql",
     "logging": false,
