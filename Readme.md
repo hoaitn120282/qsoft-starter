@@ -4,11 +4,12 @@ This repository the usage of Sequelize within an [Express](https://expressjs.com
 
 ## Main Features
 
--   **Local Authentication** using Email and Password
--   **OAuth 1.0a Authentication** via Twitter
--   **OAuth 2.0 Authentication** via Facebook, Google, GitHub, LinkedIn, Instagram
 -   MVC Project Structure
 -   Node.js clusters support
+-   Sequelize ORM
+-   Sequelize CLI
+-   Socket IO
+-   Social Authentication
 
 ## Prerequisites
 
@@ -36,6 +37,9 @@ cd myproject
 # Install NPM dependencies
 npm install
 
+# Run test
+npm test
+
 # Then simply start your app
 npm start or node index.js
 ```
@@ -51,8 +55,8 @@ You must start ngrok after starting the project.
 
 Next, you must use the https url defined by ngrok, for example `https://localhost.ngrok.io`
 
-**Note:** I highly recommend installing [Nodemon](https://github.com/remy/nodemon).
-It watches for any changes in your node.js app and automatically restarts the
+**Note:**
+[Nodemon](https://github.com/remy/nodemon) It watches for any changes in your node.js app and automatically restarts the
 server. Once installed, instead of `node app.js` use `nodemon app.js`. It will
 save you a lot of time in the long run, because you won't need to manually
 restart the server each time you make a small change in code. To install, run

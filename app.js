@@ -2,23 +2,14 @@
  * Module dependencies.
  */
 const express = require("express");
-const compression = require("compression");
-const session = require("express-session");
 const bodyParser = require("body-parser");
 const logger = require("morgan");
 const chalk = require("chalk");
 const errorHandler = require("errorhandler");
-const lusca = require("lusca");
 const dotenv = require("dotenv");
-const flash = require("express-flash");
 const path = require("path");
-const passport = require("passport");
-const expressValidator = require("express-validator");
-const expressStatusMonitor = require("express-status-monitor");
-const sass = require("node-sass-middleware");
 const multer = require("multer");
 const Logger = require(process.cwd() + "/src/common/Logger");
-const upload = multer({ dest: path.join(__dirname, "uploads") });
 
 /**
  * Load environment variables from .env file, where API keys and passwords are configured.
@@ -37,10 +28,7 @@ const models = require(process.cwd() + "/src/models/index");
 models.sequelize
     .authenticate()
     .then(() => {
-        console.log(
-			"%s Database connect successful!", 
-			chalk.green("✓")
-		);
+        console.log("%s Database connect successful!", chalk.green("✓"));
     })
     .catch(err => {
         Logger.error("Unable to connect to the database:", err);

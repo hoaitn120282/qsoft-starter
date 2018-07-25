@@ -1,0 +1,18 @@
+[
+    {
+        "_id": "5b5041c028495a1390a414c7",
+        "tokens": [],
+        "email": "henry.tran@qsoftvietnam.com",
+        "password":
+            "$2a$10$.euNYZUBiSw5/Lfs7WXSCOJPuijA.nk0jva75g9T8KKGm87gdiUZm",
+        "createdAt": "2018-07-19T07:46:08.973Z",
+        "updatedAt": "2018-07-19T07:47:03.624Z",
+        "__v": 0,
+        "profile": {
+            "gender": "male",
+            "location": "Vietnam",
+            "name": "Henry Tran",
+            "website": ""
+        }
+    }
+]
