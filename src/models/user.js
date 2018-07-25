@@ -13,8 +13,25 @@ module.exports = (sequelize, DataTypes) => {
     github: DataTypes.STRING,
     instagram: DataTypes.STRING,
     linkedin: DataTypes.STRING,
-    steam: DataTypes.STRING,
-    tokens: DataTypes.STRING,
+    steam: DataTypes.STRING,    
+    tokens: { 
+        type: DataTypes.STRING, 
+        get: function() {
+            return JSON.parse(this.getDataValue('tokens'));
+        }, 
+        set: function(val) {
+            return this.setDataValue('tokens', JSON.stringify(val));
+        }
+    },
+    profile: { 
+        type: DataTypes.STRING, 
+        get: function() {
+            return JSON.parse(this.getDataValue('profile'));
+        }, 
+        set: function(val) {
+            return this.setDataValue('profile', JSON.stringify(val));
+        }
+    }
   }, {});
   User.associate = function(models) {
     // associations can be defined here
