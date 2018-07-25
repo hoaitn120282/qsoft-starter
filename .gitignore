@@ -5,3 +5,4 @@ npm-debug.log
 /apidoc
 /node_modules
 .env
+.nyc_output
