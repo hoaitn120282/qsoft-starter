@@ -237,7 +237,6 @@ passport.use(
 );
 
 // Sign in with Twitter.
-
 passport.use(
   new TwitterStrategy(
     {
