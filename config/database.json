@@ -5,7 +5,7 @@
         "database": "qs-starter",
         "host": "127.0.0.1",
         "dialect": "mysql",
-        "logging": false,
+        "logging": true,
         "freezeTableName": true,
         "operatorsAliases": false,
         "pool": {
@@ -35,7 +35,7 @@
         "database": "qs-starter",
         "host": "127.0.0.1",
         "dialect": "mysql",
-        "logging": false,
+        "logging": true,
         "freezeTableName": true,
         "operatorsAliases": false,
         "pool": {
