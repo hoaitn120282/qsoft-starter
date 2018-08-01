@@ -1,10 +1,14 @@
 const { promisify } = require("util");
-const User = require(process.cwd() + "/src/models/User");
+const models = require(process.cwd() + "/src/models/index");
 
 /**
  * GET /account
  * Login page.
  */
 exports.getAccount = (req, res) => {
-    res.send({account:"demo api"});
+    const user = models.User.findAll()
+        .then(data => {
+            res.send({ account: data });
+        })
+        .catch(err => {});
 };
