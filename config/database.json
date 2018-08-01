@@ -1,7 +1,7 @@
 {
     "development": {
         "username": "root",
-        "password": "",
+        "password": "Admin@123456!",
         "database": "qs-starter",
         "host": "127.0.0.1",
         "dialect": "mysql",
@@ -31,7 +31,7 @@
     },
     "production": {
         "username": "root",
-        "password": "",
+        "password": "Admin@123456!",
         "database": "qs-starter",
         "host": "127.0.0.1",
         "dialect": "mysql",
