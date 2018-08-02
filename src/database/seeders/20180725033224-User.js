@@ -1,4 +1,5 @@
 "use strict";
+const time = require("moment");
 
 module.exports = {
     up: (queryInterface, Sequelize) => {

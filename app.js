@@ -67,7 +67,6 @@ if (fs.existsSync(routePath)) {
             controllerName = file;
             const routes = require(routePath + "/" + controllerName);
             routeName = controllerName.split(".");
-            console.log(routeName[0]);
             app.use("/" + routeName[0], routes);
         });
 }

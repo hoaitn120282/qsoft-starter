@@ -7,7 +7,7 @@ class baseRepository {
         this.options = options;
     }
     /**
-     *Override the findAll method to custom function.
+     * Search for multiple elements in the database
      * @param {*} options
      * @returns {*|Promise.<{rows: Model[]}>}
      */
@@ -27,13 +27,66 @@ class baseRepository {
     }
 
     /**
-     * Find a record by ID.
+     * Search for one specific element in the database by ID.
      * @param id
      * @param options
      * @returns {*|Promise.<Model>}
      */
     findById(id, options) {
         return this.model.findById(id, options);
+    }
+    /**
+     * Search for one specific element in the database by attributes.
+     * Example: findOne({ where: {title: 'aProject'} })
+     * @param {*} options
+     * @returns {*|Promise.<Model>}
+     */
+    findOne(options) {
+        return this.model.findOne(options);
+    }
+    /**
+     * Search for a specific element or create it if not available.
+     * Example: modelName.findOrCreate({where: {username: 'xxxxx'}, defaults: {job: 'Technical Lead JavaScript'}})
+     * @param {*} options
+     * @returns {*|Promise.<Model>}
+     */
+    findOrCreate(options) {
+        return this.model.findOrCreate(options);
+    }
+    /**
+     * Get the greatest value of a specific attribute within a specific table
+     * @param {*} attribute
+     * @param {*} option
+     * @returns {*|Promise.<Number>}
+     */
+    max(attribute, option) {
+        return this.model.max(attribute, option);
+    }
+    /**
+     * Get the least value of a specific attribute within a specific table
+     * @param {*} attribute
+     * @param {*} option
+     * @returns {*|Promise.<Number>}
+     */
+    min(attribute, option) {
+        return this.model.min(attribute, option);
+    }
+    /**
+     * Sum the value of specific attributes
+     * @param {*} attribute
+     * @param {*} option
+     * @returns {*|Promise.<Number>}
+     */
+    sum(attribute, option) {
+        return this.model.sum(attribute, option);
+    }
+    /**
+     * Search for multiple elements in the database, returns both data and total count
+     * @param {*} options
+     * @returns {*|Promise.<{rows: Model[]}>}
+     */
+    findAndCountAll(options) {
+        return this.model.findAndCountAll(options);
     }
     /**
      * Create new record.

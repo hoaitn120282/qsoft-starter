@@ -9,7 +9,10 @@ const Logger = require(process.cwd() + "/src/common/Logger");
 exports.getAccount = (req, res) => {
     const userModel = new userRepository(req, res);
     userModel
-        .paginate()
+        .paginate({
+            litmit: 10,
+            offset: 1
+        })
         .then(data => {
             return res.send(data);
         })

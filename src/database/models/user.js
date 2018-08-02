@@ -8,7 +8,6 @@ module.exports = (sequelize, DataTypes) => {
             password: DataTypes.STRING,
             passwordResetToken: DataTypes.STRING,
             passwordResetExpires: DataTypes.DATE,
-
             facebook: DataTypes.STRING,
             twitter: DataTypes.STRING,
             google: DataTypes.STRING,
@@ -27,6 +26,8 @@ module.exports = (sequelize, DataTypes) => {
             }
         },
         {
+            // don't add the timestamp attributes (updatedAt, createdAt)
+            timestamps: true,
             // define the table's name
             tableName: "users"
         }
