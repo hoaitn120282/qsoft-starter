@@ -26,7 +26,10 @@ module.exports = (sequelize, DataTypes) => {
                 }
             }
         },
-        {}
+        {
+            // define the table's name
+            tableName: "users"
+        }
     );
     Users.associate = function(models) {
         // associations can be defined here

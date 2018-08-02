@@ -14,8 +14,8 @@ const sequelize = new Sequelize(
     config.password,
     config
 );
-
-fs.readdirSync(__dirname)
+const dirModel = process.cwd() + "/src/database/models";
+fs.readdirSync(dirModel)
     .filter(file => {
         return (
             file.indexOf(".") !== 0 &&
@@ -24,7 +24,7 @@ fs.readdirSync(__dirname)
         );
     })
     .forEach(file => {
-        var model = sequelize["import"](path.join(__dirname, file));
+        var model = sequelize["import"](path.join(dirModel, file));
         db[model.name] = model;
     });
 
