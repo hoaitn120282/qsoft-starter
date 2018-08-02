@@ -42,7 +42,7 @@ const app = express();
  * Express configuration.
  */
 app.set("host", process.env.NODE_HOST || "0.0.0.0");
-app.set("port", process.env.NODE_PORT || 8080);
+app.set("port", process.env.NODE_PORT || 8000);
 app.use(logger("dev"));
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
