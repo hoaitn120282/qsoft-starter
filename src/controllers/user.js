@@ -2,6 +2,7 @@ const { promisify } = require("util");
 const userRepository = require(process.cwd() +
     "/src/database/repositories/user");
 const Logger = require(process.cwd() + "/src/common/Logger");
+const helper = require(process.cwd() + "/src/common/helper");
 /**
  * GET /account
  * Login page.
@@ -14,10 +15,13 @@ exports.getAccount = (req, res) => {
             offset: 1
         })
         .then(data => {
-            return res.send(data);
+            return res.send(helper.formatOutputData(data, "Query Successful!"));
         })
         .catch(err => {
-            Logger.err("Unable to query data:", err);
+            Logger.err(
+                "Unable to query data:",
+                helper.displayErrorMessage(err)
+            );
         });
 };
 
